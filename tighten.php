@@ -31,7 +31,7 @@ $people = json_decode($people,true);
 $emails = [];
 $arr = [];
  
-foreach($people['data'] as $person) {
+foreach(getValue($people,'data',[]) as $person) {
     $emails[] = getValue($person,'email');
     $person = addFullName($person);
     $arr[] = $person;
