@@ -1,0 +1,140 @@
+@white: #fff;
+@lightgray: #cfcfcf;
+@darkgray: #303030;
+@black: #000;
+@almost_black: #333;
+
+.rounded-corners(@radius){
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.margin-bottom-1 {
+  margin-bottom:1em;
+}
+html,body {
+  background-color:@almost_black;
+  height:100%;
+}
+
+.navbar-default {
+  background-color: @black;
+  border: none;
+  opacity: .875;
+}
+.navbar {
+  min-height: 70px;
+  margin-bottom: 0;
+  .navbar-brand {
+    color:@lightgray;
+    height: 70px;
+    line-height:60px;
+    padding: 5px 15px;
+  }
+  li {
+    padding:15px;
+    > a {
+      -webkit-box-shadow: inset 0px 0px 1px 0px rgba(0,0,0,1);
+      -moz-box-shadow: inset 0px 0px 1px 0px rgba(0,0,0,1);
+      box-shadow: inset 0px 0px 1px 0px rgba(0,0,0,1);
+      background-color:@almost_black;
+      border-radius: 2px;
+      color: @lightgray !important;
+      padding: 10px 15px;
+    }
+    > a:hover {
+      background-color:@lightgray !important;
+      color: @almost_black !important;
+    }
+  }
+  li.active {
+    > a {
+      color:@almost_black !important;
+    }
+  }
+}
+ul {
+  margin-bottom:0;
+}
+
+.container {
+  background: @lightgray url('/img/basswp.jpg') no-repeat top center;
+  border-left: 1px solid @black;
+  border-right: 1px solid @black;
+  height: 100%;
+}
+
+.content {
+  .rounded-corners(4px);
+  background-color:@lightgray;
+  -webkit-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,5);
+  -moz-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,5);
+  box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,5);
+  height:70%;
+  padding: 2em 1em 1em;
+  margin: 10em auto 0;
+  opacity: 0.95;
+  overflow-y: auto;
+  overflow-x:hidden;
+  position: relative;
+  filter: alpha(opacity=95);
+  width: 90%;
+}
+.page-head {
+  float:left;
+}
+
+.tagline {
+  float:right;
+  overflow:hidden;
+  white-space: nowrap;
+}
+
+.words {
+  margin-top:7em;
+}
+
+.logo {
+  border-color: #000000;
+  border-image: none;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 3px 1px 1px;
+  max-width: 320px;
+  width: 100%;
+}
+
+.more-words {
+  border-color: #000000;
+  border-image: none;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 3px 1px 1px;
+  margin: 0 0 1em;
+  overflow: hidden;
+  padding: 1em;
+}
+
+.portfolio {
+  .rounded-corners(3px);
+  border: 1px solid @darkgray;
+  margin-bottom: 1em;
+  max-height:300px;
+  max-width:400px;
+}
+
+footer {
+  margin: 1em 0;
+}
+
+.social {
+  background: url('/img/sprite_social.png') no-repeat;
+  width: 48px;
+
+}
+.social.github {
+  background-position: 0 0;
+}
+.social.linkedin {
+  background-position: 0 -48px;
+}
